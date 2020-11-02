@@ -3,6 +3,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
 {
+    // TODO: work-out why speed is messed out on scene load
+
     [Header("Genereal")]
     [Tooltip("In ms^-1")][SerializeField] float controlSpeed = 20f;
     [Tooltip("In m")][SerializeField] float xRange = 5f;

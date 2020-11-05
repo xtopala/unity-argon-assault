@@ -5112,7 +5112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2155997895996221787, guid: 24161b815f79acf4f88355f2f0b341ac, type: 3}
       propertyPath: m_Name
-      value: Bullets Right Wing
+      value: Gun Right
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24161b815f79acf4f88355f2f0b341ac, type: 3}
@@ -5174,7 +5174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2155997895996221787, guid: 24161b815f79acf4f88355f2f0b341ac, type: 3}
       propertyPath: m_Name
-      value: Bullets Left Wing
+      value: Gun Left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24161b815f79acf4f88355f2f0b341ac, type: 3}

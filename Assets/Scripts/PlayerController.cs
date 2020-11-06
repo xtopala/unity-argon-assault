@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
@@ -22,12 +21,6 @@ public class PlayerController : MonoBehaviour
 
     float xThrow, yThrow;
     bool isControlEnabled = true;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -75,26 +68,19 @@ public class PlayerController : MonoBehaviour
     {
         if (CrossPlatformInputManager.GetButton("Fire"))
         {
-            ActivateGuns();
+            SetGunsActivate(true);
         } else
         {
-            DeactivateGuns();
+            SetGunsActivate(false);
         }
     }
 
-    private void ActivateGuns()
+    private void SetGunsActivate(bool isActive)
     {
-        foreach (GameObject gun in guns)
+        foreach (GameObject gun in guns)    // care, may affect death FX
         {
-            gun.SetActive(true);
-        }
-    }
-
-    private void DeactivateGuns()
-    {
-        foreach (GameObject gun in guns)
-        {
-            gun.SetActive(false);
+            var emmissionModule = gun.GetComponent<ParticleSystem>().emission;
+            emmissionModule.enabled = isActive;
         }
     }
 
